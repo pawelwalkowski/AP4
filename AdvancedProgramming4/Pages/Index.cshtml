@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@if (Model.IsAuthenticated)
+{
+    <div style="width : 100%;">
+        
+        <div id="chat" style="border : 1px solid #000000; padding : 10px; max-height : 500px; width : 100%; overflow: auto">
+
+        </div>
+
+        <form id="form" style="margin-top : 10px;">
+            <input id="message" type="text" style="width: calc(100% - 65px);" placeholder="Czat..."/>
+            <button type="submit" style="float : right;">Wyślij</button>
+        </form>
+
+    </div>
+    
+    <script>
+    var isAuthentiacted = true;
+    </script>
+}
+else
+{
+    <h4>Zaloguj się by czatować</h4>
+}
